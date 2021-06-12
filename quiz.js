@@ -41,7 +41,7 @@ function displayQuestion(index, question, answer) {
       process.exit(0);
     }
   
-    if(userAns !== 'a' && userAns!== 'b' && userAns!== "c") {
+    if(userAns !== 'a' && userAns!== 'b' && userAns!== "c" && userAns!== "d") {
       console.log('Invalid Input. Please attempt the question again.');
     }
   }
@@ -76,6 +76,11 @@ function checkAnswer(userAns, answer) {
     console.log(boxen(chalk.bold.black('Correct Answer'),corAnsBox));
     score++;
   }
+   else {
+    console.log(`You answered: ${userAns}`);
+    console.log(boxen(chalk.bold.black(`Wrong Answer.\nThe correct answer is: ${answer}`), wrongAnsBox));
+  }
+
 }
 
 module.exports = {

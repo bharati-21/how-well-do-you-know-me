@@ -40,14 +40,12 @@ function welcome() {
   // Welcoming the user
   log(`\nWelcome`, chalk.bold.blueBright(userName));
 
-  let beginQuiz = "";
-  
   // Logging instructions on the screen from the "instructions" module
   log(instructions.instruction);
 
   // Until user enters "exit" or "start"
-  while(beginQuiz!== "exit" && beginQuiz!=="start") {
-     beginQuiz = readLineSync.question(`Enter "start" to play the quiz or "exit" to leave. `).toLowerCase();
+  while(beginQuiz!== "exit" && beginQuiz!=="start"){
+     beginQuiz = (readLineSync.question(`Enter "start" to play the quiz or "exit" to leave. `)).toLowerCase();
   }
 
   if(beginQuiz === 'exit') {
@@ -71,11 +69,17 @@ function welcome() {
     }
     console.log(boxen('Thank you for chossing to play!',welcomeBox));
   }
+
+  return {
+    userName,
+    beginQuiz: beginQuiz.toLowerCase()
+  }
 }
 
 // Exporting username, welcome() and begin quiz
 module.exports = {
-  welcome,
-  userName,
-  beginQuiz: beginQuiz.toLowerCase()
+  welcome
 };
+
+
+

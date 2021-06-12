@@ -21,44 +21,39 @@ const questionsModule = require('./questions.js');
 const quizModule = require('./quiz.js');
 
 
-// Calling the welcome(). 
-// Prints instructions and welcome message.
-welcomeModule.welcome();
-
 // Variables to hold user names and whether user wishes to take the quiz
-const userName = welcomeModule.userName;
-const beginQuiz = welcomeModule.beginQuiz;
+var userName = "";
+var beginQuiz = "";
 
 
 // Variable to hold score.
 var score = 0;
 
 
-/*
-  If user chooses to "start" the quiz, then:
-  1. Call quiz() to display questions, take user answer input, check answer and update score.
-  2. Save the quiz results and update "score" variable
-  4. Call calculateScore() to print the final score card
-*/
+start();
 
-if(beginQuiz!== 'exit') {
-  const questions = questionsModule.questions;
-  const quiz = quizModule.quiz;  
+// The main function in the module
 
-  const quizResults = quiz(questions);
-  score = quizResults.score;
+function start() {
+  console.log('Starting');
+
+  // Calling the welcome(). Prints instructions and welcome message
+  const welcomeModuleRes = welcomeModule.welcome();
   
-  calculateScore();
+  userName = welcomeModuleRes.userName;
+  beginQuiz = welcomeModuleRes.beginQuiz;
 
-  setTimeout(() => {
-    console.log(chalk.bgGray.whiteBright.bold.underline("\n\nRETURNING TO MAIN SCREEN...\n\n"));
-  }, 10000);
+  if(beginQuiz !== 'exit') {
+    const questions = questionsModule.questions;
+    const quiz = quizModule.quiz;  
 
-  setTimeout(() => {
-      clear();
-      welcomeModule.welcome();
-  }, 20000);
+    const quizResults = quiz(questions);
+    score = quizResults.score;
+    
+    calculateScore();      
+  }
 }
+
 
 
 // Function that prints score card after checking levels and score
@@ -91,10 +86,12 @@ function calculateScore() {
     backgroundColor: '#333'
   };
 
+
   setTimeout(() => {
     spinner.stop(true);
     clear();
       
+    
     var text = chalk.bold.underline.blackBright.bgWhiteBright("SCORE CARD");
 
     // If user was has a score less than or equal to 3
@@ -115,14 +112,13 @@ function calculateScore() {
       text += printScoreCard('green') +  "\n" + chalk.bold.bgGreenBright.black('YOU ARE A GREAT FRIEND!\n YOU KNOW BHRARATI REALLY WELL.\nCONGRATULATIONS!');
       console.log(boxen(text, levelThreeBox));
     }
-    
   }, 4000);
 }
 
 
 function printScoreCard(color) {
   var text = chalk.bold `
-      \nFINAL SCORE: {${color} ${score}} 
+        \nFINAL SCORE: {${color} ${score}} 
     `;
     return text.toString();
 }
