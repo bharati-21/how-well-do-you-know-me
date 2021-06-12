@@ -96,20 +96,20 @@ function calculateScore() {
 
     // If user was has a score less than or equal to 3
     if(score <= 3) { 
-      text += printScoreCard('redBright') +  "\n" + chalk.bold.bgRedBright.black('YOU DO NOT KNOW BHARATI WELL!\nBETTER LUCK NEXT TIME!');
+      text += printScoreCard('red') +  "\n" + chalk.bold.bgRedBright.black('YOU DO NOT KNOW BHARATI WELL!\n\nBETTER LUCK NEXT TIME!');
 
       console.log(boxen(text, levelOneBox));
     }
 
     // If user was at leve1 2 when the quiz ended
     else if(score > 3 && score <7) {
-      text += printScoreCard('yellowBright') +  "\n" + chalk.bold.bgYellowBright.black('YOU KNOW BHARATI WELL!\nGREAT JOB!');
+      text += printScoreCard('yellowBright') +  "\n" + chalk.bold.bgYellowBright.black('YOU KNOW BHARATI WELL!\n\nGREAT JOB!');
       console.log(boxen(text, levelTwoBox));
     }
 
     // If user has a score greater than or equal to 7
     else {
-      text += printScoreCard('green') +  "\n" + chalk.bold.bgGreenBright.black('YOU ARE A GREAT FRIEND!\n YOU KNOW BHRARATI REALLY WELL.\nCONGRATULATIONS!');
+      text += printScoreCard('green') +  "\n" + chalk.bold.bgGreenBright.black('YOU ARE A GREAT FRIEND!\n\nYOU KNOW BHRARATI REALLY WELL.\n\n\nCONGRATULATIONS!');
       console.log(boxen(text, levelThreeBox));
     }
   }, 4000);
