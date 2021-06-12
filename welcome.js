@@ -19,7 +19,7 @@ var beginQuiz = '';
 
 function welcome() {
   // Title text
-  const title = chalk.blue.bold("WELCOME TO THE HARRY POTTER TRIVIA QUIZ");
+  const title = chalk.blue.bold("HOW WELL YOU KNOW BHARATI?");
 
   // Adding box styles to the title
   const titleBox = {

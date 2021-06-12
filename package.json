@@ -1,0 +1,28 @@
+{
+  "name": "how-well-do-you-know-me",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bharati-21/how-well-do-you-know-me.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bharati-21/how-well-do-you-know-me/issues"
+  },
+  "homepage": "https://github.com/bharati-21/how-well-do-you-know-me#readme",
+  "dependencies": {
+    "boxen": "^5.0.1",
+    "chalk": "^4.1.1",
+    "clear": "^0.1.0",
+    "cli-spinner": "^0.2.10",
+    "ora": "^5.4.1",
+    "readline-sync": "^1.4.10"
+  }
+}
