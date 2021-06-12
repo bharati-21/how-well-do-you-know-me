@@ -30,3 +30,20 @@ This is a fun quiz to test my close-friends and family on how well they know me.
    * These questions are displayed to the user, and then user enters the choice of answer.
    * This answer is checked with the original answer and the score is updated.
    * The final score is returned to the `app.js` module where the final score is displayed using various styles from [`CHALK`](https://www.npmjs.com/package/chalk) and [`boxen`](https://www.npmjs.com/package/boxen).
+
+
+## EXTERNAL PACKAGES AND MODULES USED
+1. [`CHALK`](https://www.npmjs.com/package/chalk)
+   * This package is used to add colors, styles and weights to plain console.log displays
+ 
+1. [`boxen`](https://www.npmjs.com/package/boxen)
+   * This package provides box like styles with padding, borders, margins, colors and backgrounds
+
+1. [`readline-sync`](https://www.npmjs.com/package/readline-sync)
+   * This package provides interactivity to have a conversation with the user via a console.
+
+1. [`cli-spinner`](https://www.npmjs.com/package/cli-spinner)
+   * This package provides spinners and loading objects to indicate a loading process.
+
+1. [`clear`](https://www.npmjs.com/package/clear)
+   * This package is used to clear the terminal screen or move the cursor position to the topmost left of the terminal (0,0).
