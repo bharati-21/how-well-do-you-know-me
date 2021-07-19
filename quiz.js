@@ -8,7 +8,7 @@
 const readLineSync = require('readline-sync');
 const chalk = require('chalk');
 const boxen = require('boxen');
-const wrap = require('word-wrap');
+// const wrap = require('word-wrap');
 
 
 
@@ -38,7 +38,7 @@ function displayQuestion(index, question, answer) {
     }
 
     userAns = (readLineSync.question(boxen(
-      wrap(ques, {width: 55}), 
+      ques, 
       quesBox))).toLowerCase();
     
     if(userAns === "exit") {

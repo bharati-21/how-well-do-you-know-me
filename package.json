@@ -24,6 +24,7 @@
     "clear": "^0.1.0",
     "cli-spinner": "^0.2.10",
     "ora": "^5.4.1",
-    "readline-sync": "^1.4.10"
+    "readline-sync": "^1.4.10",
+    "word-wrap": "^1.2.3"
   }
 }

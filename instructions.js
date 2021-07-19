@@ -13,7 +13,7 @@ const instructionBody = `
     1. Questions are in the form of MCQ.\n
     2. There are 10 questions in the quiz to test how well you know Bharati.\n
     3. Type "a", "b", "c" or "d" to answer the question. To exit the quiz, type "exit".\n
-    4. Correct answer for every question will be displayed after user attempts it.\n
+    4. Correct answer for every question will be displayed after you attempt it.\n
     5. Every question is played for a score of 1. No negative score for incorrect answers\n
     6. Final score will be displayed at the end of the quiz.\n
   `;

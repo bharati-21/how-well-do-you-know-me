@@ -9,7 +9,7 @@ const chalk = require('chalk');
 const readLineSync = require('readline-sync');
 const boxen = require('boxen');
 const log = console.log;
-const wrap = require('word-wrap');
+// const wrap = require('word-wrap');
 
 
 // Importing required modules
@@ -35,7 +35,7 @@ function welcome() {
 
   // logging title to the screen
   log(boxen(
-    (title,{width: 55}), 
+    title, 
     titleBox));
 
   // Asking for user's name

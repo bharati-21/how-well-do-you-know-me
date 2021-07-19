@@ -100,7 +100,7 @@ function calculateScore() {
       text += printScoreCard('red') +  "\n" + chalk.bold.bgRedBright.black('YOU DO NOT KNOW BHARATI WELL!\n\nBETTER LUCK NEXT TIME!');
 
       console.log(boxen(
-        wrap(text, {width:55}),
+       text,
         levelOneBox));
     }
 
@@ -108,7 +108,7 @@ function calculateScore() {
     else if(score > 3 && score <7) {
       text += printScoreCard('yellowBright') +  "\n" + chalk.bold.bgYellowBright.black('YOU KNOW BHARATI WELL!\n\nGREAT JOB!');
       console.log(boxen(
-        wrap(text, {width:55}), 
+        text, 
       levelTwoBox));
     }
 
@@ -116,7 +116,7 @@ function calculateScore() {
     else {
       text += printScoreCard('green') +  "\n" + chalk.bold.bgGreenBright.black('YOU ARE A GREAT FRIEND!\n\nYOU KNOW BHRARATI REALLY WELL.\n\n\nCONGRATULATIONS!');
       console.log(boxen(
-        wrap(text, {width:55}), 
+        text, 
       levelThreeBox));
     }
   }, 4000);

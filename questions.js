@@ -67,7 +67,7 @@ const questions = [
   },
 
   {
-    question: `How many schools have Bharati gone to since kindergarten?\n
+    question: `How many schools have Bharati been to since kindergarten?\n
     a. 7
     b. 6
     c. 5
@@ -85,7 +85,7 @@ const questions = [
   },
 
   {
-    question: `What is the biggest turn of for Bharati?\n
+    question: `What is the one trait that Bharati dislikes?\n
     a. Dishonesty
     b. Cursing
     c. Pretense
