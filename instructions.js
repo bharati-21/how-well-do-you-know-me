@@ -4,6 +4,8 @@
 
 // Importing required modules
 const boxen = require('boxen');
+const wrap = require('word-wrap');
+
 
 // Instructions 
 const instructionTitle = "HOW TO ATTEMPT THIS QUIZ?\n\n"
@@ -34,5 +36,10 @@ const instructionBody = `
 
 // exporting the instruction which is used by "welcome" module
 module.exports = {
-   instruction: (boxen(instructionTitle + instructionBody, instructionBox))
+  
+   instruction: (boxen(   
+     wrap(instructionTitle + instructionBody, {
+       width: 55
+     }),
+     instructionBox))
  };

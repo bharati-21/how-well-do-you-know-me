@@ -7,6 +7,7 @@ const clear = require('clear');
 const boxen = require('boxen');
 const chalk = require('chalk');
 const ora = require('ora');
+const wrap = require('word-wrap');
 const Spinner = require('cli-spinner').Spinner;
 
 // Importing all required modules
@@ -98,19 +99,25 @@ function calculateScore() {
     if(score <= 3) { 
       text += printScoreCard('red') +  "\n" + chalk.bold.bgRedBright.black('YOU DO NOT KNOW BHARATI WELL!\n\nBETTER LUCK NEXT TIME!');
 
-      console.log(boxen(text, levelOneBox));
+      console.log(boxen(
+        wrap(text, {width:55}),
+        levelOneBox));
     }
 
     // If user was at leve1 2 when the quiz ended
     else if(score > 3 && score <7) {
       text += printScoreCard('yellowBright') +  "\n" + chalk.bold.bgYellowBright.black('YOU KNOW BHARATI WELL!\n\nGREAT JOB!');
-      console.log(boxen(text, levelTwoBox));
+      console.log(boxen(
+        wrap(text, {width:55}), 
+      levelTwoBox));
     }
 
     // If user has a score greater than or equal to 7
     else {
       text += printScoreCard('green') +  "\n" + chalk.bold.bgGreenBright.black('YOU ARE A GREAT FRIEND!\n\nYOU KNOW BHRARATI REALLY WELL.\n\n\nCONGRATULATIONS!');
-      console.log(boxen(text, levelThreeBox));
+      console.log(boxen(
+        wrap(text, {width:55}), 
+      levelThreeBox));
     }
   }, 4000);
 }

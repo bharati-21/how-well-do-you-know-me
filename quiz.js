@@ -8,6 +8,8 @@
 const readLineSync = require('readline-sync');
 const chalk = require('chalk');
 const boxen = require('boxen');
+const wrap = require('word-wrap');
+
 
 
 var score = 0;
@@ -35,7 +37,9 @@ function displayQuestion(index, question, answer) {
       backgroundColor: '#fff',
     }
 
-    userAns = (readLineSync.question(boxen(ques, quesBox))).toLowerCase();
+    userAns = (readLineSync.question(boxen(
+      wrap(ques, {width: 55}), 
+      quesBox))).toLowerCase();
     
     if(userAns === "exit") {
       process.exit(0);

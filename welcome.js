@@ -9,6 +9,8 @@ const chalk = require('chalk');
 const readLineSync = require('readline-sync');
 const boxen = require('boxen');
 const log = console.log;
+const wrap = require('word-wrap');
+
 
 // Importing required modules
 const instructions = require('./instructions.js');
@@ -32,7 +34,9 @@ function welcome() {
   }
 
   // logging title to the screen
-  log(boxen(title, titleBox));
+  log(boxen(
+    (title,{width: 55}), 
+    titleBox));
 
   // Asking for user's name
   userName = readLineSync.question('What is your name? ');
