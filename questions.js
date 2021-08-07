@@ -27,7 +27,7 @@ const questions = [
     b. Watch Movies or T.V. Series
     c. Sleep
     d. Go Jogging`,
-    answer: 'd'
+    answer: 'a'
   },
 
   {
@@ -40,7 +40,7 @@ const questions = [
   },
 
   {
-    question: `What kind of superpower would Bharati like to poses?\n
+    question: `What kind of superpower would Bharati like to possess?\n
     a. Telepathy
     b. Super Speed
     c. Flying
@@ -51,7 +51,7 @@ const questions = [
   {
     question: `What is Bharati's favorite YouTuber??\n
     a. Traversy Media
-    b. Tanay Pratap
+    b. Nick White
     c. freeCodeCamp
     d. She does not watch YouTube`,
     answer: 'c'
