@@ -38,8 +38,13 @@ function welcome() {
     title, 
     titleBox));
 
-  // Asking for user's name
+  while(userName == "") {
+// Asking for user's name
   userName = readLineSync.question('What is your name? ');
+  }
+  
+
+
 
   // Welcoming the user
   log(`\nWelcome`, chalk.bold.blueBright(userName));

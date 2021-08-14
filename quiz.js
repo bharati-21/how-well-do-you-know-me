@@ -79,10 +79,14 @@ function checkAnswer(userAns, answer) {
     console.log(`You answered: ${userAns}`);
     console.log(boxen(chalk.bold.black('Correct Answer'),corAnsBox));
     score++;
+
+    console.log(chalk.bold.bgBlack.yellowBright(`Your score: ${score}\n`));
   }
    else {
     console.log(`You answered: ${userAns}`);
     console.log(boxen(chalk.bold.black(`Wrong Answer.\nThe correct answer is: ${answer}`), wrongAnsBox));
+
+    console.log(chalk.bold.bgBlack.yellowBright(`Your score: ${score}\n`));
   }
 
 }

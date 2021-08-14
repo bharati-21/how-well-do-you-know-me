@@ -59,7 +59,7 @@ function start() {
 
 // Function that prints score card after checking levels and score
 function calculateScore() {
-  var spinner = new Spinner('Caclulating Your Score... %s');
+  var spinner = new Spinner('Generating Your Score Card... %s');
   spinner.setSpinnerString("* -–—–- *");
   spinner.start();
 
