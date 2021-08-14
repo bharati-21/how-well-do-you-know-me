@@ -90,7 +90,7 @@ function calculateScore() {
 
   setTimeout(() => {
     spinner.stop(true);
-    clear();
+    // clear();
       
     
     var text = chalk.bold.underline.blackBright.bgWhiteBright("SCORE CARD");
@@ -119,7 +119,7 @@ function calculateScore() {
         text, 
       levelThreeBox));
     }
-  }, 4000);
+  }, 3500);
 }
 
 
